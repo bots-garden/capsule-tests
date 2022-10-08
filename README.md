@@ -31,7 +31,7 @@ cabu build . hello-world.go hello-world.wasm
 ```bash
 docker run \
   -p 8080:8080 \
-  -v $(pwd):/app --rm k33g/capsule-launcher:0.2.6 \
+  -v $(pwd):/app --rm k33g/capsule-launcher:0.2.7 \
   /capsule \
   -wasm=./app/hello-world.wasm \
   -mode=http \
@@ -49,8 +49,8 @@ curl http://localhost:8080
 ### Install
 
 ```bash
-#CAPSULE_VERSION="v0.2.6"
-CAPSULE_VERSION="main"
+CAPSULE_VERSION="v0.2.7"
+#CAPSULE_VERSION="main"
 wget -O - https://raw.githubusercontent.com/bots-garden/capsule/${CAPSULE_VERSION}/install-capsule-launcher.sh| bash
 ```
 
