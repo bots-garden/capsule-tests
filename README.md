@@ -3,7 +3,7 @@
 ## Install Capsule Builder
 
 ```bash
-CAPSULE_BUILDER_VERSION="v0.0.1"
+CAPSULE_BUILDER_VERSION="v0.0.2"
 wget -O - https://raw.githubusercontent.com/bots-garden/capsule-function-builder/${CAPSULE_BUILDER_VERSION}/install-capsule-builder.sh | bash
 ```
 
@@ -31,7 +31,7 @@ cabu build . hello-world.go hello-world.wasm
 ```bash
 docker run \
   -p 8080:8080 \
-  -v $(pwd):/app --rm k33g/capsule-launcher:0.2.7 \
+  -v $(pwd):/app --rm k33g/capsule-launcher:0.2.8 \
   /capsule \
   -wasm=./app/hello-world.wasm \
   -mode=http \
@@ -49,7 +49,7 @@ curl http://localhost:8080
 ### Install
 
 ```bash
-CAPSULE_VERSION="v0.2.7"
+CAPSULE_VERSION="v0.2.8"
 #CAPSULE_VERSION="main"
 wget -O - https://raw.githubusercontent.com/bots-garden/capsule/${CAPSULE_VERSION}/install-capsule-launcher.sh| bash
 ```
@@ -57,7 +57,7 @@ wget -O - https://raw.githubusercontent.com/bots-garden/capsule/${CAPSULE_VERSIO
 or:
 
 ```bash
-CAPSULE_VERSION="v0.2.6"
+CAPSULE_VERSION="v0.2.8"
 CAPSULE_PATH="$HOME/.local/bin"
 CAPSULE_OS="linux"
 CAPSULE_ARCH="amd64"
